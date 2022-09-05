@@ -1,7 +1,7 @@
 <!--
  * @Author: C.
  * @Date: 2022-09-05 15:21:11
- * @LastEditTime: 2022-09-05 16:38:20
+ * @LastEditTime: 2022-09-05 16:44:21
  * @Description: file content
 -->
 # c-deploy-cli
@@ -32,6 +32,7 @@ npm i c-deploy-cli -g
 deploy init
 ```
 ### 2.配置部署环境
+**安全起见，请在.gitignore文件中配置。让git忽略deploy文件夹，防止隐私泄露**
 部署配置文件位于deploy文件夹下的`deploy.config.js`,
 一般包含`dev`（测试环境）和`prod`（线上环境）两个配置，再有多余的环境配置形式与之类似，只有一个环境的可以删除另一个多余的配置（比如只有`prod`线上环境，请删除`dev`测试环境配置）。
 
@@ -40,7 +41,7 @@ deploy init
 module.exports = {
   privateKey: '', // 本地私钥地址，位置一般在C:/Users/xxx/.ssh/id_rsa，非必填，有私钥则配置
   passphrase: '', // 本地私钥密码，非必填，有私钥则配置
-  projectName: 'hivue', // 项目名称
+  projectName: 'xxx', // 项目名称
   dev: { // 测试环境
     name: '测试环境',
     script: "npm run build-dev", // 测试环境打包脚本
