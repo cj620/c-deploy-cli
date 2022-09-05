@@ -1,4 +1,10 @@
 #!/usr/bin/env node
+/*
+ * @Author: C.
+ * @Date: 2022-09-05 15:21:11
+ * @LastEditTime: 2022-09-05 16:34:19
+ * @Description: file content
+ */
 const path = require('path');
 const fs = require('fs');
 const inquirer = require('inquirer');
@@ -12,7 +18,7 @@ const requiredNodeVersion = packageJson.engines.node;
 
 const versionOptions = ['-V', '--version'];
 
-checkNodeVersion(requiredNodeVersion, 'fe-deploy');
+checkNodeVersion(requiredNodeVersion, 'c-deploy-cli');
 
 const program = require('commander');
 
@@ -65,8 +71,8 @@ function deploy() {
                         process.exit(1);
                     }
                     if (sure) {
-                        const deploy = require('../lib/deploy');
-                        deploy(config);
+                        const _deploy = require('../lib/deploy');
+                        _deploy(config);
                     }
                 });
 
