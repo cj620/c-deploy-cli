@@ -3,7 +3,7 @@
     "version": "0.0.4",
     "description": "A cli tool for web deploy.",
     "bin": {
-        "deploy01": "index.js"
+        "deploy": "index.js"
     },
     "keywords": [
         "web",
